@@ -5,31 +5,11 @@
 %clc
 tic
 clock
-%% Carregar constantes no workspace
+%% Carregar arquivo de constantes
 run constantes.m
 
-%% Determinar a simulação
-%simulacao = 'Simulacao1';
-%simulacao = 'Simulacao2';
-%simulacao = 'Simulacao3';
-%simulacao = 'Simulacao4';
-%simulacao = 'Simulacao5';
-%simulacao = 'Simulacao6';
-%simulacao = 'Simulacao7';
-%simulacao = 'Simulacao8';
-%simulacao = 'Simulacao9';
-%simulacao = 'Simulacao10';
-%simulacao = 'Simulacao11';
-%simulacao = 'Simulacao12';
-%simulacao = 'Simulacao13';
-%simulacao = 'Simulacao14';
-%simulacao = 'Simulacao15';
-%simulacao = 'Simulacao16';
-%simulacao = 'Simulacao17';
-%simulacao = 'Simulacao18';
-%simulacao = 'Simulacao19';
-simulacao = 'Simulacao20';
-
+%% Determinar a simulação de acordo com a planilha de entradas (excel)
+simulacao = 'Simulacao21';
 
 %% Carregando valores da tabela de entradas
 
@@ -195,79 +175,14 @@ t_man = tf/2;
 %% Configuração dos artefatos gerados
 run('artifacticsFolder.m')
 
-%% Rodar simulação variando T e Td
-cont = 1;
-for i = (0:10:100)*10^-12 %Tpulse
-    for j = (0:1:5)*10^9 %Td
-        magne_ruido = i;
-        magne_bias = j;
+%% Rodar simulação
+sim('SFF_Simulator.slx');
 
-    %% Rodar simulação
-    clock
-    sim('SFF_Simulator.slx');
-
-    %% Saídas
-    Out(cont) = struct('Simulation',ans);
-    cont = cont + 1
-
-    end
-end
-
-% cont = 1;
-% for i = 0:1:1 %Tpulse
-%     for j = 0:10:10 %Td
-%         TpulseTorq = i;
-%         TdTorq = j;
-% 
-%     %% Rodar simulação
-%     clock
-%     sim('SFF_Simulator.slx');
-% 
-%     %% Saídas
-%     Out(cont) = struct('Simulation',ans);
-%     cont = cont + 1
-% 
-%     end
-% end
-
-% cont = 41;
-% giro_ruido = 0.06;
-% giro_bias = 4;
-% sim('SFF_Simulator.slx');
-% Out(cont) = struct('Simulation',ans);
-% cont = cont + 1
-% 
-% giro_ruido = 0.06;
-% giro_bias = 5;
-% sim('SFF_Simulator.slx');
-% Out(cont) = struct('Simulation',ans);
-% cont = cont + 1
-% 
-% 
-% for i = 0.07:0.01:0.1 %Tpulse
-%     for j = 0:1:5 %Td
-%         giro_ruido = i;
-%         giro_bias = j;
-% 
-%     %% Rodar simulação
-%     clock
-%     sim('SFF_Simulator.slx');
-% 
-%     %% Saídas
-%     Out(cont) = struct('Simulation',ans);
-%     cont = cont + 1
-% 
-%     end
-% end
-
-% %% Rodar simulação
-% sim('SFF_Simulator.slx');
-% 
-% %% Saídas
-% Out = struct('Simulation',ans);
+%% Saídas
+Out = struct('Simulation',ans);
 
 %% Salvar os dados
-save(sprintf('C:/Users/rodri/OneDrive/Mestrado_ITA/Dissertacao/Dissertacao_Rodrigo_Dias/SFFS/Simulador/Resultados/resultados_%s.mat',simulacao),'Out')
+%save(sprintf('C:/Users/rodri/OneDrive/Mestrado_ITA/Dissertacao/Dissertacao_Rodrigo_Dias/SFFS/Simulador/Resultados/resultados_%s.mat',simulacao),'Out')
 
 %% Som final de simulação concluída
 load gong.mat
