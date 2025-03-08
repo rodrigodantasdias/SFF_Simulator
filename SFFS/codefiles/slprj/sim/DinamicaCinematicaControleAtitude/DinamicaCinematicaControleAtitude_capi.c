@@ -34,29 +34,13 @@ TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 0 , 1 , - 1 , 0
 } , { 1 , 0 , TARGET_STRING (
 "DinamicaCinematicaControleAtitude/DinamicaAtitudeSeguidor/Integrator1" ) ,
 TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1 , 0
-} , { 2 , 7 , TARGET_STRING (
-"DinamicaCinematicaControleAtitude/Subsystem1/Spacecraft BUS1/Integrator" ) ,
-TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 0 , 1 , - 1 , 0
-} , { 3 , 11 , TARGET_STRING (
- "DinamicaCinematicaControleAtitude/Subsystem1/LeaderEulerRef/Spacecraft BUS/Integrator"
-) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 0 , 1 , - 1
-, 0 } , { 4 , 18 , TARGET_STRING (
- "DinamicaCinematicaControleAtitude/Subsystem1/Spacecraft BUS1/Dinâmica/Integrator1"
-) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
-, 0 } , { 5 , 15 , TARGET_STRING (
- "DinamicaCinematicaControleAtitude/Subsystem1/LeaderEulerRef/Spacecraft BUS/Dinâmica/Integrator1"
-) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
-, 0 } , { 0 , - 1 , ( NULL ) , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 , 0 ,
-- 1 , 0 } } ; static int_T rt_LoggedStateIdxList [ ] = { 1 , 0 , 2 , 3 , 5 ,
-4 } ;
+} , { 0 , - 1 , ( NULL ) , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 , 0 , - 1
+, 0 } } ; static int_T rt_LoggedStateIdxList [ ] = { 1 , 0 } ;
 #ifndef HOST_CAPI_BUILD
 static void DinamicaCinematicaControleAtitude_InitializeDataAddr ( void *
 dataAddr [ ] , ggv1uslzom * localDW , mcofgvk0eq * localX ) { dataAddr [ 0 ]
 = ( void * ) ( & localX -> fqwmftubxu [ 0 ] ) ; dataAddr [ 1 ] = ( void * ) (
-& localX -> dg5bug3ja3 [ 0 ] ) ; dataAddr [ 2 ] = ( void * ) ( & localX ->
-j4xd5u3n0w [ 0 ] ) ; dataAddr [ 3 ] = ( void * ) ( & localX -> bztxdjvraq [ 0
-] ) ; dataAddr [ 4 ] = ( void * ) ( & localX -> drrg20ihu3 [ 0 ] ) ; dataAddr
-[ 5 ] = ( void * ) ( & localX -> k02tgfg05z [ 0 ] ) ; }
+& localX -> dg5bug3ja3 [ 0 ] ) ; }
 #endif
 #ifndef HOST_CAPI_BUILD
 static void DinamicaCinematicaControleAtitude_InitializeVarDimsAddr ( int32_T
@@ -65,9 +49,7 @@ static void DinamicaCinematicaControleAtitude_InitializeVarDimsAddr ( int32_T
 #ifndef HOST_CAPI_BUILD
 static void DinamicaCinematicaControleAtitude_InitializeLoggingFunctions (
 RTWLoggingFcnPtr loggingPtrs [ ] ) { loggingPtrs [ 0 ] = ( NULL ) ;
-loggingPtrs [ 1 ] = ( NULL ) ; loggingPtrs [ 2 ] = ( NULL ) ; loggingPtrs [ 3
-] = ( NULL ) ; loggingPtrs [ 4 ] = ( NULL ) ; loggingPtrs [ 5 ] = ( NULL ) ;
-}
+loggingPtrs [ 1 ] = ( NULL ) ; }
 #endif
 static TARGET_CONST rtwCAPI_DataTypeMap rtDataTypeMap [ ] = { { "double" ,
 "real_T" , 0 , 0 , sizeof ( real_T ) , ( uint8_T ) SS_DOUBLE , 0 , 0 , 0 } }
@@ -83,15 +65,15 @@ rtcapiStoredFloats [ ] = { 0.0 } ; static rtwCAPI_FixPtMap rtFixPtMap [ ] = {
 { ( NULL ) , ( NULL ) , rtwCAPI_FIX_RESERVED , 0 , 0 , ( boolean_T ) 0 } , }
 ; static rtwCAPI_SampleTimeMap rtSampleTimeMap [ ] = { { ( const void * ) &
 rtcapiStoredFloats [ 0 ] , ( const void * ) & rtcapiStoredFloats [ 0 ] , (
-int8_T ) 0 , ( uint8_T ) 0 } } ; static int_T rtContextSystems [ 23 ] ;
+int8_T ) 0 , ( uint8_T ) 0 } } ; static int_T rtContextSystems [ 10 ] ;
 static rtwCAPI_LoggingMetaInfo loggingMetaInfo [ ] = { { 0 , 0 , "" , 0 } } ;
-static rtwCAPI_ModelMapLoggingStaticInfo mmiStaticInfoLogging = { 23 ,
+static rtwCAPI_ModelMapLoggingStaticInfo mmiStaticInfoLogging = { 10 ,
 rtContextSystems , loggingMetaInfo , 0 , ( NULL ) , { 0 , ( NULL ) , ( NULL )
 } , 0 , ( NULL ) } ; static rtwCAPI_ModelMappingStaticInfo mmiStatic = { {
 rtBlockSignals , 0 , ( NULL ) , 0 , ( NULL ) , 0 } , { ( NULL ) , 0 , ( NULL
-) , 0 } , { rtBlockStates , 6 } , { rtDataTypeMap , rtDimensionMap ,
+) , 0 } , { rtBlockStates , 2 } , { rtDataTypeMap , rtDimensionMap ,
 rtFixPtMap , rtElementMap , rtSampleTimeMap , rtDimensionArray } , "float" ,
-{ 4243983744U , 1911850158U , 3489089849U , 4276026521U } , &
+{ 3244053317U , 1117023637U , 2777855867U , 2936397910U } , &
 mmiStaticInfoLogging , 0 , ( boolean_T ) 0 , rt_LoggedStateIdxList } ; const
 rtwCAPI_ModelMappingStaticInfo *
 DinamicaCinematicaControleAtitude_GetCAPIStaticMap ( void ) { return &
@@ -106,42 +88,19 @@ systemRan [ 2 ] = ( NULL ) ; systemRan [ 3 ] = ( NULL ) ; systemRan [ 4 ] = (
 NULL ) ; systemRan [ 5 ] = ( NULL ) ; systemRan [ 6 ] = ( NULL ) ; systemRan
 [ 7 ] = ( sysRanDType * ) & localDW -> csrasjj5cf ; systemRan [ 8 ] = (
 sysRanDType * ) & localDW -> la0x4crr0r ; systemRan [ 9 ] = ( NULL ) ;
-systemRan [ 10 ] = ( NULL ) ; systemRan [ 11 ] = ( NULL ) ; systemRan [ 12 ]
-= ( NULL ) ; systemRan [ 13 ] = ( NULL ) ; systemRan [ 14 ] = ( NULL ) ;
-systemRan [ 15 ] = ( NULL ) ; systemRan [ 16 ] = ( NULL ) ; systemRan [ 17 ]
-= ( NULL ) ; systemRan [ 18 ] = ( NULL ) ; systemRan [ 19 ] = ( NULL ) ;
-systemRan [ 20 ] = ( NULL ) ; systemRan [ 21 ] = ( NULL ) ; systemRan [ 22 ]
-= ( NULL ) ; systemTid [ 1 ] = bwldjdcyog -> Timing . mdlref_GlobalTID [ 1 ]
-; systemTid [ 2 ] = bwldjdcyog -> Timing . mdlref_GlobalTID [ 0 ] ; systemTid
-[ 3 ] = bwldjdcyog -> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [ 4 ] =
-bwldjdcyog -> Timing . mdlref_GlobalTID [ 1 ] ; systemTid [ 5 ] = bwldjdcyog
--> Timing . mdlref_GlobalTID [ 1 ] ; systemTid [ 6 ] = bwldjdcyog -> Timing .
+systemTid [ 1 ] = bwldjdcyog -> Timing . mdlref_GlobalTID [ 1 ] ; systemTid [
+2 ] = bwldjdcyog -> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [ 3 ] =
+bwldjdcyog -> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [ 4 ] = bwldjdcyog
+-> Timing . mdlref_GlobalTID [ 1 ] ; systemTid [ 5 ] = bwldjdcyog -> Timing .
+mdlref_GlobalTID [ 1 ] ; systemTid [ 6 ] = bwldjdcyog -> Timing .
 mdlref_GlobalTID [ 1 ] ; systemTid [ 7 ] = bwldjdcyog -> Timing .
 mdlref_GlobalTID [ 1 ] ; systemTid [ 8 ] = bwldjdcyog -> Timing .
 mdlref_GlobalTID [ 1 ] ; systemTid [ 9 ] = bwldjdcyog -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 10 ] = bwldjdcyog -> Timing .
-mdlref_GlobalTID [ 1 ] ; systemTid [ 11 ] = bwldjdcyog -> Timing .
-mdlref_GlobalTID [ 1 ] ; systemTid [ 12 ] = bwldjdcyog -> Timing .
-mdlref_GlobalTID [ 1 ] ; systemTid [ 17 ] = bwldjdcyog -> Timing .
-mdlref_GlobalTID [ 1 ] ; systemTid [ 13 ] = bwldjdcyog -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 14 ] = bwldjdcyog -> Timing .
-mdlref_GlobalTID [ 1 ] ; systemTid [ 16 ] = bwldjdcyog -> Timing .
-mdlref_GlobalTID [ 1 ] ; systemTid [ 15 ] = bwldjdcyog -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 21 ] = bwldjdcyog -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 18 ] = bwldjdcyog -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 19 ] = bwldjdcyog -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 20 ] = bwldjdcyog -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 22 ] = bwldjdcyog -> Timing .
 mdlref_GlobalTID [ 0 ] ; systemTid [ 0 ] = rootTid ; rtContextSystems [ 0 ] =
 0 ; rtContextSystems [ 1 ] = 0 ; rtContextSystems [ 2 ] = 0 ;
 rtContextSystems [ 3 ] = 0 ; rtContextSystems [ 4 ] = 7 ; rtContextSystems [
 5 ] = 7 ; rtContextSystems [ 6 ] = 7 ; rtContextSystems [ 7 ] = 7 ;
-rtContextSystems [ 8 ] = 8 ; rtContextSystems [ 9 ] = 0 ; rtContextSystems [
-10 ] = 0 ; rtContextSystems [ 11 ] = 0 ; rtContextSystems [ 12 ] = 0 ;
-rtContextSystems [ 13 ] = 0 ; rtContextSystems [ 14 ] = 0 ; rtContextSystems
-[ 15 ] = 0 ; rtContextSystems [ 16 ] = 0 ; rtContextSystems [ 17 ] = 0 ;
-rtContextSystems [ 18 ] = 0 ; rtContextSystems [ 19 ] = 0 ; rtContextSystems
-[ 20 ] = 0 ; rtContextSystems [ 21 ] = 0 ; rtContextSystems [ 22 ] = 0 ; }
+rtContextSystems [ 8 ] = 8 ; rtContextSystems [ 9 ] = 0 ; }
 #endif
 #ifndef HOST_CAPI_BUILD
 void DinamicaCinematicaControleAtitude_InitializeDataMapInfo ( adbbpxjmjx *

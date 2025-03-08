@@ -283,8 +283,8 @@ mr_rodaReacaoCaracteristicas_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW
 -> rtdw . eyc5oac1ta ) , rtdwData , 0 , 2 , sizeof ( mdlrefDW -> rtdw .
 eyc5oac1ta ) ) ; } } void
 mr_rodaReacaoCaracteristicas_RegisterSimStateChecksum ( SimStruct * S ) {
-const uint32_T chksum [ 4 ] = { 871742432U , 3783317750U , 2367337102U ,
-2342763502U , } ; slmrModelRefRegisterSimStateChecksum ( S ,
+const uint32_T chksum [ 4 ] = { 1345249757U , 85441217U , 1346491499U ,
+2394459971U , } ; slmrModelRefRegisterSimStateChecksum ( S ,
 "rodaReacaoCaracteristicas" , & chksum [ 0 ] ) ; } mxArray *
 mr_rodaReacaoCaracteristicas_GetSimStateDisallowedBlocks ( ) { return ( NULL
 ) ; }

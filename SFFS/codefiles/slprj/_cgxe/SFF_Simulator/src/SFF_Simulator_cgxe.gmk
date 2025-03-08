@@ -8,7 +8,7 @@ LD = $(CC)
  
 MODEL     = SFF_Simulator
 TARGET      = cgxe
-MODULE_SRCS   = m_Ly9meXpFPtWrgyuheFp0pD.c
+MODULE_SRCS   = m_fth5jBLVfE0pWr3ET4cZQC.c
 MODEL_SRC  = SFF_Simulator_cgxe.c
 MODEL_REG = SFF_Simulator_cgxe_registry.c
 MAKEFILE    = SFF_Simulator_cgxe.gmk
@@ -16,14 +16,14 @@ MATLAB_ROOT  = c:\program files\matlab\r2024a\toolbox\stateflow\stateflow\..\..\
 BUILDARGS   = 
 #------------------------------ Include/Lib Path ------------------------------
  
-USER_INCLUDES = -I"C:\Users\rodri\OneDrive\mestrado_ita\dissertacao\dissertacao_rodrigo_dias\SFFS\codefiles\slprj\_cgxe\sff_simulator\src" -I"C:\Users\rodri\OneDrive\mestrado_ita\dissertacao\dissertacao_rodrigo_dias\SFFS" -I"C:\Users\rodri\OneDrive\mestrado_ita\dissertacao\dissertacao_rodrigo_dias\SFFS\simulador" -I"C:\Users\rodri\OneDrive\Mestrado_ITA\Dissertacao\Dissertacao_Rodrigo_Dias\SFFS\codefiles\slprj\_cprj" 
+USER_INCLUDES = -I"D:\Git\sff_simulator\SFFS\codefiles\slprj\_cgxe\sff_simulator\src" -I"D:\Git\sff_simulator\SFFS" -I"D:\Git\sff_simulator\SFFS\simulador" -I"D:\Git\SFF_Simulator\SFFS\codefiles\slprj\_cprj" 
 AUX_INCLUDES = 
 MLSLSF_INCLUDES  = \
     -I"C:\Program Files\MATLAB\R2024a\extern\include" \
     -I"C:\Program Files\MATLAB\R2024a\simulink\include" \
     -I"C:\Program Files\MATLAB\R2024a\rtw\c\src" 
 
-THIRD_PARTY_INCLUDES = -I"C:\Users\rodri\OneDrive\Mestrado_ITA\Dissertacao\Dissertacao_Rodrigo_Dias\SFFS\codefiles\slprj\_cgxe\SFF_Simulator\src" -I"C:\Users\rodri\OneDrive\Mestrado_ITA\Dissertacao\Dissertacao_Rodrigo_Dias\SFFS\codefiles" 
+THIRD_PARTY_INCLUDES = -I"D:\Git\SFF_Simulator\SFFS\codefiles\slprj\_cgxe\SFF_Simulator\src" -I"D:\Git\SFF_Simulator\SFFS\codefiles" 
 
 INCLUDE_PATH = $(USER_INCLUDES) $(AUX_INCLUDES) $(MLSLSF_INCLUDES) $(COMPILER_INCLUDES) $(THIRD_PARTY_INCLUDES)
  

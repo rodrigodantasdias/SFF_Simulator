@@ -2,7 +2,7 @@
 ## Makefile generated for component 'DinamicaCinematicaControleAtitude'. 
 ## 
 ## Makefile     : DinamicaCinematicaControleAtitude.mk
-## Generated on : Sun Jun 16 15:52:03 2024
+## Generated on : Fri Mar 07 16:41:08 2025
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/DinamicaCinematicaControleAtitude_msf.mexw64
 ## Product type : shared library
 ## 
@@ -25,7 +25,7 @@ MAKEFILE                  = DinamicaCinematicaControleAtitude.mk
 MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2024a
 MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2024a/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
-START_DIR                 = C:/Users/rodri/OneDrive/Mestrado_ITA/Dissertacao/Dissertacao_Rodrigo_Dias/SFFS/codefiles
+START_DIR                 = D:/Git/SFF_Simulator/SFFS/codefiles
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0
@@ -180,7 +180,7 @@ DEFINES_ = -DMATLAB_DEFAULT_RELEASE=R2018a
 DEFINES_BUILD_ARGS = -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTERMFCN=1 -DONESTEPFCN=0 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0
 DEFINES_CUSTOM = 
 DEFINES_OPTS = -DIS_SIM_TARGET -DMATLAB_MEX_FILE -DTID01EQ=1
-DEFINES_STANDARD = -DMODEL=DinamicaCinematicaControleAtitude -DNUMST=2 -DNCSTATES=21 -DHAVESTDIO -DMDL_REF_SIM_TGT=1 -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0
+DEFINES_STANDARD = -DMODEL=DinamicaCinematicaControleAtitude -DNUMST=2 -DNCSTATES=7 -DHAVESTDIO -DMDL_REF_SIM_TGT=1 -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0
 
 DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(DEFINES_STANDARD)
 
@@ -210,7 +210,7 @@ PREBUILT_OBJS =
 ## LIBRARIES
 ###########################################################################
 
-MODELREF_LIBS = C:/Users/rodri/OneDrive/Mestrado_ITA/Dissertacao/Dissertacao_Rodrigo_Dias/SFFS/codefiles/slprj/sim/DinamicaCinematicaControleAtitude/DinamicaCinematicaControleAtitudelib.lib
+MODELREF_LIBS = D:/Git/SFF_Simulator/SFFS/codefiles/slprj/sim/DinamicaCinematicaControleAtitude/DinamicaCinematicaControleAtitudelib.lib
 
 LIBS = $(START_DIR)/slprj/sim/_sharedutils/rtwshared.lib
 

@@ -1,10 +1,13 @@
 % Get the current configuration
 cfg = Simulink.fileGenControl('getConfig');
 
+%Path where the project file is located (root path)
+rootPath = fileparts(which('SFFS.prj'));
+
 % Change the parameters to non-default locations
 % for the cache and code generation folders
-cfg.CacheFolder = fullfile('C:\Users\rodri\OneDrive\Mestrado_ITA\Dissertacao\Dissertacao_Rodrigo_Dias\SFFS','codefiles');
-cfg.CodeGenFolder = fullfile('C:\Users\rodri\OneDrive\Mestrado_ITA\Dissertacao\Dissertacao_Rodrigo_Dias\SFFS','codefiles');
+cfg.CacheFolder = fullfile(rootPath,'codefiles');
+cfg.CodeGenFolder = fullfile(rootPath,'codefiles');
 cfg.CodeGenFolderStructure = 'TargetEnvironmentSubfolder';
 
 Simulink.fileGenControl('setConfig', 'config', cfg);

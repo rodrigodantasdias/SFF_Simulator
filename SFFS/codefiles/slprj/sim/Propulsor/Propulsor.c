@@ -641,16 +641,16 @@ inionp4ncy ) , rtdwData , 0 , 22 , sizeof ( mdlrefDW -> rtdw . inionp4ncy ) )
 ; mr_Propulsor_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtdw .
 ohtlwjnutg ) , rtdwData , 0 , 23 , sizeof ( mdlrefDW -> rtdw . ohtlwjnutg ) )
 ; } } void mr_Propulsor_RegisterSimStateChecksum ( SimStruct * S ) { const
-uint32_T chksum [ 4 ] = { 2795435247U , 3577963341U , 3255882608U ,
-1962458027U , } ; slmrModelRefRegisterSimStateChecksum ( S , "Propulsor" , &
-chksum [ 0 ] ) ; } mxArray * mr_Propulsor_GetSimStateDisallowedBlocks ( ) {
-mxArray * data = mxCreateCellMatrix ( 1 , 3 ) ; mwIndex subs [ 2 ] , offset ;
-{ static const char_T * blockType [ 1 ] = { "MATLABSystem" , } ; static const
-char_T * blockPath [ 1 ] = { "Propulsor/Random Source2" , } ; static const
-int reason [ 1 ] = { 6 , } ; for ( subs [ 0 ] = 0 ; subs [ 0 ] < 1 ; ++ (
-subs [ 0 ] ) ) { subs [ 1 ] = 0 ; offset = mxCalcSingleSubscript ( data , 2 ,
-subs ) ; mxSetCell ( data , offset , mxCreateString ( blockType [ subs [ 0 ]
-] ) ) ; subs [ 1 ] = 1 ; offset = mxCalcSingleSubscript ( data , 2 , subs ) ;
+uint32_T chksum [ 4 ] = { 19716797U , 3714951263U , 1612264561U , 1813027323U
+, } ; slmrModelRefRegisterSimStateChecksum ( S , "Propulsor" , & chksum [ 0 ]
+) ; } mxArray * mr_Propulsor_GetSimStateDisallowedBlocks ( ) { mxArray * data
+= mxCreateCellMatrix ( 1 , 3 ) ; mwIndex subs [ 2 ] , offset ; { static const
+char_T * blockType [ 1 ] = { "MATLABSystem" , } ; static const char_T *
+blockPath [ 1 ] = { "Propulsor/Random Source2" , } ; static const int reason
+[ 1 ] = { 6 , } ; for ( subs [ 0 ] = 0 ; subs [ 0 ] < 1 ; ++ ( subs [ 0 ] ) )
+{ subs [ 1 ] = 0 ; offset = mxCalcSingleSubscript ( data , 2 , subs ) ;
+mxSetCell ( data , offset , mxCreateString ( blockType [ subs [ 0 ] ] ) ) ;
+subs [ 1 ] = 1 ; offset = mxCalcSingleSubscript ( data , 2 , subs ) ;
 mxSetCell ( data , offset , mxCreateString ( blockPath [ subs [ 0 ] ] ) ) ;
 subs [ 1 ] = 2 ; offset = mxCalcSingleSubscript ( data , 2 , subs ) ;
 mxSetCell ( data , offset , mxCreateDoubleScalar ( ( real_T ) reason [ subs [

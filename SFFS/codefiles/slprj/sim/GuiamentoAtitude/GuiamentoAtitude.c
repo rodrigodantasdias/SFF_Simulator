@@ -192,10 +192,10 @@ ljgbgmm0igs * mdlrefDW ) { ( void ) mdlrefDW ; return ( NULL ) ; } void
 mr_GuiamentoAtitude_SetDWork ( ljgbgmm0igs * mdlrefDW , const mxArray * ssDW
 ) { ( void ) ssDW ; ( void ) mdlrefDW ; } void
 mr_GuiamentoAtitude_RegisterSimStateChecksum ( SimStruct * S ) { const
-uint32_T chksum [ 4 ] = { 2549654755U , 1015559063U , 532318501U ,
-1728043809U , } ; slmrModelRefRegisterSimStateChecksum ( S ,
-"GuiamentoAtitude" , & chksum [ 0 ] ) ; } mxArray *
-mr_GuiamentoAtitude_GetSimStateDisallowedBlocks ( ) { return ( NULL ) ; }
+uint32_T chksum [ 4 ] = { 600979273U , 298156947U , 4163614501U , 237460385U
+, } ; slmrModelRefRegisterSimStateChecksum ( S , "GuiamentoAtitude" , &
+chksum [ 0 ] ) ; } mxArray * mr_GuiamentoAtitude_GetSimStateDisallowedBlocks
+( ) { return ( NULL ) ; }
 #if defined(_MSC_VER)
 #pragma warning(disable: 4505) //unreferenced local function has been removed
 #endif

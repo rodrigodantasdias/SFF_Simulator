@@ -111,10 +111,9 @@ unitIdReg ) ;
 } ssSetInputPortDirectFeedThrough ( S , 0 , 1 ) ;
 ssSetInputPortRequiredContiguous ( S , 0 , 1 ) ; ssSetInputPortOptimOpts ( S
 , 0 , SS_NOT_REUSABLE_AND_LOCAL ) ; ssSetInputPortOverWritable ( S , 0 ,
-false ) ; ssSetInputPortSampleTime ( S , 0 , 0.01 ) ;
-ssSetInputPortOffsetTime ( S , 0 , 0.0 ) ; if ( !
-ssSetInputPortVectorDimension ( S , 1 , 3 ) ) return ;
-ssSetInputPortDimensionsMode ( S , 1 , FIXED_DIMS_MODE ) ;
+false ) ; ssSetInputPortSampleTime ( S , 0 , 0.1 ) ; ssSetInputPortOffsetTime
+( S , 0 , 0.0 ) ; if ( ! ssSetInputPortVectorDimension ( S , 1 , 3 ) ) return
+; ssSetInputPortDimensionsMode ( S , 1 , FIXED_DIMS_MODE ) ;
 ssSetInputPortFrameData ( S , 1 , FRAME_NO ) ; if ( ssGetSimMode ( S ) !=
 SS_SIMMODE_SIZES_CALL_ONLY ) { ssSetInputPortDataType ( S , 1 , SS_DOUBLE ) ;
 } if ( ssGetSimMode ( S ) != SS_SIMMODE_SIZES_CALL_ONLY ) {
@@ -126,9 +125,9 @@ unitIdReg ) ;
 } ssSetInputPortDirectFeedThrough ( S , 1 , 1 ) ;
 ssSetInputPortRequiredContiguous ( S , 1 , 1 ) ; ssSetInputPortOptimOpts ( S
 , 1 , SS_NOT_REUSABLE_AND_LOCAL ) ; ssSetInputPortOverWritable ( S , 1 ,
-false ) ; ssSetInputPortSampleTime ( S , 1 , 0.01 ) ;
-ssSetInputPortOffsetTime ( S , 1 , 0.0 ) ; if ( ! ssSetNumOutputPorts ( S , 2
-) ) return ; if ( ! ssSetOutputPortVectorDimension ( S , 0 , 3 ) ) return ;
+false ) ; ssSetInputPortSampleTime ( S , 1 , 0.1 ) ; ssSetInputPortOffsetTime
+( S , 1 , 0.0 ) ; if ( ! ssSetNumOutputPorts ( S , 2 ) ) return ; if ( !
+ssSetOutputPortVectorDimension ( S , 0 , 3 ) ) return ;
 ssSetOutputPortDimensionsMode ( S , 0 , FIXED_DIMS_MODE ) ;
 ssSetOutputPortFrameData ( S , 0 , FRAME_NO ) ; if ( ssGetSimMode ( S ) !=
 SS_SIMMODE_SIZES_CALL_ONLY ) { ssSetOutputPortDataType ( S , 0 , SS_DOUBLE )

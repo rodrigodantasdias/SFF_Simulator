@@ -187,7 +187,7 @@ slmrRegisterPeriodicOutputUpdateMethod ( S , mdlPeriodicOutputUpdate ) ;
 ssSetSimulinkVersionGeneratedIn ( S , "24.1" ) ; ssSetNeedAbsoluteTime ( S ,
 1 ) ; } static void mdlInitializeSampleTimes ( SimStruct * S ) {
 ssSetSampleTime ( S , 0 , 0 ) ; ssSetOffsetTime ( S , 0 , 0 ) ;
-ssSetSampleTime ( S , 1 , 0.01 ) ; ssSetOffsetTime ( S , 1 , 0 ) ; return ; }
+ssSetSampleTime ( S , 1 , 0.1 ) ; ssSetOffsetTime ( S , 1 , 0 ) ; return ; }
 #define MDL_SET_WORK_WIDTHS
 static void mdlSetWorkWidths ( SimStruct * S ) { if ( S -> mdlInfo ->
 genericFcn != ( NULL ) ) { _GenericFcn fcn = S -> mdlInfo -> genericFcn ;

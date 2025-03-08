@@ -2,7 +2,7 @@
 ## Makefile generated for component 'Propulsor'. 
 ## 
 ## Makefile     : Propulsor.mk
-## Generated on : Sun Jun 16 15:51:21 2024
+## Generated on : Fri Mar 07 16:00:58 2025
 ## Final product: ./Propulsorlib.lib
 ## Product type : static library
 ## 
@@ -24,7 +24,7 @@ MAKEFILE                  = Propulsor.mk
 MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2024a
 MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2024a/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
-START_DIR                 = C:/Users/rodri/OneDrive/Mestrado_ITA/Dissertacao/Dissertacao_Rodrigo_Dias/SFFS/codefiles
+START_DIR                 = D:/Git/SFF_Simulator/SFFS/codefiles
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0

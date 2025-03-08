@@ -284,8 +284,8 @@ mr_magnetorquerCaracteristicas_restoreDataFromMxArray ( ( void * ) & (
 mdlrefDW -> rtdw . i1tixxcmjx ) , rtdwData , 0 , 4 , sizeof ( mdlrefDW ->
 rtdw . i1tixxcmjx ) ) ; } } void
 mr_magnetorquerCaracteristicas_RegisterSimStateChecksum ( SimStruct * S ) {
-const uint32_T chksum [ 4 ] = { 614449035U , 3808918447U , 3787841310U ,
-2375017645U , } ; slmrModelRefRegisterSimStateChecksum ( S ,
+const uint32_T chksum [ 4 ] = { 1178012240U , 2635573330U , 3927897502U ,
+4105370855U , } ; slmrModelRefRegisterSimStateChecksum ( S ,
 "magnetorquerCaracteristicas" , & chksum [ 0 ] ) ; } mxArray *
 mr_magnetorquerCaracteristicas_GetSimStateDisallowedBlocks ( ) { return (
 NULL ) ; }

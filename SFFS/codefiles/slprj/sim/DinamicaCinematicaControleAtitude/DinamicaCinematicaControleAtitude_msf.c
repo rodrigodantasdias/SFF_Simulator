@@ -14,23 +14,21 @@
 #include "DinamicaCinematicaControleAtitude_types.h"
 #include "DinamicaCinematicaControleAtitude.h"
 #include "DinamicaCinematicaControleAtitude_private.h"
-real_T rtP_a0_ini ; real_T rtP_e0_ini ; real_T rtP_f0_ini ; real_T rtP_giro ;
-real_T rtP_mi ; real_T rtP_omega0_ini ; real_T rtP_phi_i ; real_T rtP_psi_i ;
-real_T rtP_theta_i ; const char * rt_GetMatSignalLoggingFileName ( void ) {
-return NULL ; } const char * rt_GetMatSigLogSelectorFileName ( void ) {
-return NULL ; } void * rt_GetOSigstreamManager ( void ) { return NULL ; }
-void * rt_slioCatalogue ( void ) { return NULL ; } void *
-rtwGetPointerFromUniquePtr ( void * uniquePtr ) { return NULL ; } void *
-CreateDiagnosticAsVoidPtr ( const char * id , int nargs , ... ) { void *
-voidPtrDiagnostic = NULL ; va_list args ; va_start ( args , nargs ) ;
-slmrCreateDiagnostic ( id , nargs , args , & voidPtrDiagnostic ) ; va_end (
-args ) ; return voidPtrDiagnostic ; } void rt_ssSet_slErrMsg ( void * S ,
-void * diag ) { SimStruct * simStrcut = ( SimStruct * ) S ; if ( !
-_ssIsErrorStatusAslErrMsg ( simStrcut ) ) { _ssSet_slLocalErrMsg ( simStrcut
-, diag ) ; } else { _ssDiscardDiagnostic ( simStrcut , diag ) ; } } void
-rt_ssReportDiagnosticAsWarning ( void * S , void * diag ) {
-_ssReportDiagnosticAsWarning ( ( SimStruct * ) S , diag ) ; } void
-rt_ssReportDiagnosticAsInfo ( void * S , void * diag ) {
+real_T rtP_giro ; real_T rtP_phi_i ; real_T rtP_psi_i ; real_T rtP_theta_i ;
+const char * rt_GetMatSignalLoggingFileName ( void ) { return NULL ; } const
+char * rt_GetMatSigLogSelectorFileName ( void ) { return NULL ; } void *
+rt_GetOSigstreamManager ( void ) { return NULL ; } void * rt_slioCatalogue (
+void ) { return NULL ; } void * rtwGetPointerFromUniquePtr ( void * uniquePtr
+) { return NULL ; } void * CreateDiagnosticAsVoidPtr ( const char * id , int
+nargs , ... ) { void * voidPtrDiagnostic = NULL ; va_list args ; va_start (
+args , nargs ) ; slmrCreateDiagnostic ( id , nargs , args , &
+voidPtrDiagnostic ) ; va_end ( args ) ; return voidPtrDiagnostic ; } void
+rt_ssSet_slErrMsg ( void * S , void * diag ) { SimStruct * simStrcut = (
+SimStruct * ) S ; if ( ! _ssIsErrorStatusAslErrMsg ( simStrcut ) ) {
+_ssSet_slLocalErrMsg ( simStrcut , diag ) ; } else { _ssDiscardDiagnostic (
+simStrcut , diag ) ; } } void rt_ssReportDiagnosticAsWarning ( void * S ,
+void * diag ) { _ssReportDiagnosticAsWarning ( ( SimStruct * ) S , diag ) ; }
+void rt_ssReportDiagnosticAsInfo ( void * S , void * diag ) {
 _ssReportDiagnosticAsInfo ( ( SimStruct * ) S , diag ) ; } const char *
 rt_CreateFullPathToTop ( const char * toppath , const char * subpath ) { char
 * fullpath = NULL ; slmrCreateFullPathToTop ( toppath , subpath , & fullpath
@@ -54,32 +52,16 @@ sizeInBytes ; ( void ) customOPSaveFcn ; ( void ) customOPRestoreFcn ; }
 static void mdlProcessParameters ( SimStruct * S ) { real_T * GlobalPrm_0 = (
 real_T * ) NULL ; real_T * GlobalPrm_1 = ( real_T * ) NULL ; real_T *
 GlobalPrm_2 = ( real_T * ) NULL ; real_T * GlobalPrm_3 = ( real_T * ) NULL ;
-real_T * GlobalPrm_4 = ( real_T * ) NULL ; real_T * GlobalPrm_5 = ( real_T *
-) NULL ; real_T * GlobalPrm_6 = ( real_T * ) NULL ; real_T * GlobalPrm_7 = (
-real_T * ) NULL ; real_T * GlobalPrm_8 = ( real_T * ) NULL ; if ( !
-ssGetModelRefGlobalParamData ( S , 0 , ( void * * ) ( & GlobalPrm_0 ) ) )
-return ; if ( GlobalPrm_0 != NULL ) { ( void ) memcpy ( & ( rtP_a0_ini ) ,
+if ( ! ssGetModelRefGlobalParamData ( S , 0 , ( void * * ) ( & GlobalPrm_0 )
+) ) return ; if ( GlobalPrm_0 != NULL ) { ( void ) memcpy ( & ( rtP_giro ) ,
 GlobalPrm_0 , sizeof ( real_T ) ) ; } if ( ! ssGetModelRefGlobalParamData ( S
 , 1 , ( void * * ) ( & GlobalPrm_1 ) ) ) return ; if ( GlobalPrm_1 != NULL )
-{ ( void ) memcpy ( & ( rtP_e0_ini ) , GlobalPrm_1 , sizeof ( real_T ) ) ; }
+{ ( void ) memcpy ( & ( rtP_phi_i ) , GlobalPrm_1 , sizeof ( real_T ) ) ; }
 if ( ! ssGetModelRefGlobalParamData ( S , 2 , ( void * * ) ( & GlobalPrm_2 )
-) ) return ; if ( GlobalPrm_2 != NULL ) { ( void ) memcpy ( & ( rtP_f0_ini )
-, GlobalPrm_2 , sizeof ( real_T ) ) ; } if ( ! ssGetModelRefGlobalParamData (
-S , 3 , ( void * * ) ( & GlobalPrm_3 ) ) ) return ; if ( GlobalPrm_3 != NULL
-) { ( void ) memcpy ( & ( rtP_giro ) , GlobalPrm_3 , sizeof ( real_T ) ) ; }
-if ( ! ssGetModelRefGlobalParamData ( S , 4 , ( void * * ) ( & GlobalPrm_4 )
-) ) return ; if ( GlobalPrm_4 != NULL ) { ( void ) memcpy ( & ( rtP_mi ) ,
-GlobalPrm_4 , sizeof ( real_T ) ) ; } if ( ! ssGetModelRefGlobalParamData ( S
-, 5 , ( void * * ) ( & GlobalPrm_5 ) ) ) return ; if ( GlobalPrm_5 != NULL )
-{ ( void ) memcpy ( & ( rtP_omega0_ini ) , GlobalPrm_5 , sizeof ( real_T ) )
-; } if ( ! ssGetModelRefGlobalParamData ( S , 6 , ( void * * ) ( &
-GlobalPrm_6 ) ) ) return ; if ( GlobalPrm_6 != NULL ) { ( void ) memcpy ( & (
-rtP_phi_i ) , GlobalPrm_6 , sizeof ( real_T ) ) ; } if ( !
-ssGetModelRefGlobalParamData ( S , 7 , ( void * * ) ( & GlobalPrm_7 ) ) )
-return ; if ( GlobalPrm_7 != NULL ) { ( void ) memcpy ( & ( rtP_psi_i ) ,
-GlobalPrm_7 , sizeof ( real_T ) ) ; } if ( ! ssGetModelRefGlobalParamData ( S
-, 8 , ( void * * ) ( & GlobalPrm_8 ) ) ) return ; if ( GlobalPrm_8 != NULL )
-{ ( void ) memcpy ( & ( rtP_theta_i ) , GlobalPrm_8 , sizeof ( real_T ) ) ; }
+) ) return ; if ( GlobalPrm_2 != NULL ) { ( void ) memcpy ( & ( rtP_psi_i ) ,
+GlobalPrm_2 , sizeof ( real_T ) ) ; } if ( ! ssGetModelRefGlobalParamData ( S
+, 3 , ( void * * ) ( & GlobalPrm_3 ) ) ) return ; if ( GlobalPrm_3 != NULL )
+{ ( void ) memcpy ( & ( rtP_theta_i ) , GlobalPrm_3 , sizeof ( real_T ) ) ; }
 }
 #endif
 static void mdlInitializeConditions ( SimStruct * S ) { iqjk2gahmfr * dw = (
@@ -93,20 +75,20 @@ SimStruct * S , int_T tid ) { iqjk2gahmfr * dw = ( iqjk2gahmfr * ) ssGetDWork
 ( S , 0 ) ; real_T const * i_ff5vy3ikvm = ( real_T * ) ssGetInputPortSignal (
 S , 0 ) ; real_T const * i_hrxbdyk1yr = ( real_T * ) ssGetInputPortSignal ( S
 , 1 ) ; real_T const * i_fs10l2wtk4 = ( real_T * ) ssGetInputPortSignal ( S ,
-2 ) ; real_T * o_B_15_1 = ( real_T * ) ssGetOutputPortSignal ( S , 0 ) ;
-real_T * o_B_15_2 = ( real_T * ) ssGetOutputPortSignal ( S , 1 ) ; real_T *
-o_B_15_3 = ( real_T * ) ssGetOutputPortSignal ( S , 2 ) ; mcofgvk0eq * localX
+2 ) ; real_T * o_B_7_1 = ( real_T * ) ssGetOutputPortSignal ( S , 0 ) ;
+real_T * o_B_7_2 = ( real_T * ) ssGetOutputPortSignal ( S , 1 ) ; real_T *
+o_B_7_3 = ( real_T * ) ssGetOutputPortSignal ( S , 2 ) ; mcofgvk0eq * localX
 = ( mcofgvk0eq * ) ssGetContStates ( S ) ; if ( tid == 0 ) {
 DinamicaCinematicaControleAtitude ( & ( dw -> rtm ) , i_ff5vy3ikvm ,
-i_hrxbdyk1yr , i_fs10l2wtk4 , o_B_15_1 , o_B_15_2 , o_B_15_3 , & ( dw -> rtb
-) , & ( dw -> rtdw ) , localX ) ; k11bgqmkqe ( & ( dw -> rtm ) , & ( dw ->
-rtdw ) ) ; } } static void mdlInitializeSizes ( SimStruct * S ) { if ( ( S ->
+i_hrxbdyk1yr , i_fs10l2wtk4 , o_B_7_1 , o_B_7_2 , o_B_7_3 , & ( dw -> rtb ) ,
+& ( dw -> rtdw ) , localX ) ; k11bgqmkqe ( & ( dw -> rtm ) , & ( dw -> rtdw )
+) ; } } static void mdlInitializeSizes ( SimStruct * S ) { if ( ( S ->
 mdlInfo -> genericFcn != ( NULL ) ) && ( ! ( S -> mdlInfo -> genericFcn ) ( S
 , GEN_FCN_CHK_MODELREF_SFUN_HAS_MODEL_BLOCK , - 1 , ( NULL ) ) ) ) { return ;
 } ssSetNumSFcnParams ( S , 0 ) ; ssFxpSetU32BitRegionCompliant ( S , 1 ) ; if
 ( S -> mdlInfo -> genericFcn != ( NULL ) ) { _GenericFcn fcn = S -> mdlInfo
 -> genericFcn ; } ssSetRTWGeneratedSFcn ( S , 2 ) ; ssSetNumContStates ( S ,
-21 ) ; ssSetNumDiscStates ( S , 0 ) ; ssSetNumPeriodicContStates ( S , 0 ) ;
+7 ) ; ssSetNumDiscStates ( S , 0 ) ; ssSetNumPeriodicContStates ( S , 0 ) ;
 ssSetSymbolicDimsSupport ( S , true ) ; slmrInitializeIOPortDataVectors ( S ,
 3 , 3 ) ; if ( ! ssSetNumInputPorts ( S , 3 ) ) return ; if ( !
 ssSetInputPortMatrixDimensions ( S , 0 , 3 , 1 ) ) return ;
@@ -240,7 +222,7 @@ slmrRegisterPeriodicOutputUpdateMethod ( S , mdlPeriodicOutputUpdate ) ;
 ssSetSimulinkVersionGeneratedIn ( S , "24.1" ) ; ssSetNeedAbsoluteTime ( S ,
 1 ) ; } static void mdlInitializeSampleTimes ( SimStruct * S ) {
 ssSetSampleTime ( S , 0 , 0 ) ; ssSetOffsetTime ( S , 0 , 0 ) ;
-ssSetSampleTime ( S , 1 , 0.01 ) ; ssSetOffsetTime ( S , 1 , 0 ) ;
+ssSetSampleTime ( S , 1 , 0.1 ) ; ssSetOffsetTime ( S , 1 , 0 ) ;
 ssSetSampleTime ( S , 2 , mxGetInf ( ) ) ; ssSetOffsetTime ( S , 2 , 0 ) ;
 return ; }
 #define MDL_SET_WORK_WIDTHS
@@ -267,24 +249,20 @@ _GenericFcn fcn = S -> mdlInfo -> genericFcn ; } }
 #define MDL_START
 static void mdlStart ( SimStruct * S ) { iqjk2gahmfr * dw = ( iqjk2gahmfr * )
 ssGetDWork ( S , 0 ) ; mdlProcessParameters ( S ) ; iax1yymlbh ( & ( dw ->
-rtb ) , & ( dw -> rtdw ) ) ; }
-#define RTW_GENERATED_DISABLE
-static void mdlDisable ( SimStruct * S ) { iqjk2gahmfr * dw = ( iqjk2gahmfr *
-) ssGetDWork ( S , 0 ) ; jwdnpptmjt ( & ( dw -> rtm ) , & ( dw -> rtdw ) ) ;
-return ; } static void mdlOutputs ( SimStruct * S , int_T tid ) { iqjk2gahmfr
-* dw = ( iqjk2gahmfr * ) ssGetDWork ( S , 0 ) ; real_T const * i_ff5vy3ikvm =
-( real_T * ) ssGetInputPortSignal ( S , 0 ) ; real_T const * i_hrxbdyk1yr = (
-real_T * ) ssGetInputPortSignal ( S , 1 ) ; real_T const * i_fs10l2wtk4 = (
-real_T * ) ssGetInputPortSignal ( S , 2 ) ; real_T * o_B_15_1 = ( real_T * )
-ssGetOutputPortSignal ( S , 0 ) ; real_T * o_B_15_2 = ( real_T * )
-ssGetOutputPortSignal ( S , 1 ) ; real_T * o_B_15_3 = ( real_T * )
+rtb ) , & ( dw -> rtdw ) ) ; } static void mdlOutputs ( SimStruct * S , int_T
+tid ) { iqjk2gahmfr * dw = ( iqjk2gahmfr * ) ssGetDWork ( S , 0 ) ; real_T
+const * i_ff5vy3ikvm = ( real_T * ) ssGetInputPortSignal ( S , 0 ) ; real_T
+const * i_hrxbdyk1yr = ( real_T * ) ssGetInputPortSignal ( S , 1 ) ; real_T
+const * i_fs10l2wtk4 = ( real_T * ) ssGetInputPortSignal ( S , 2 ) ; real_T *
+o_B_7_1 = ( real_T * ) ssGetOutputPortSignal ( S , 0 ) ; real_T * o_B_7_2 = (
+real_T * ) ssGetOutputPortSignal ( S , 1 ) ; real_T * o_B_7_3 = ( real_T * )
 ssGetOutputPortSignal ( S , 2 ) ; mcofgvk0eq * localX = ( mcofgvk0eq * )
 ssGetContStates ( S ) ; if ( tid == PARAMETER_TUNING_TID ) {
 DinamicaCinematicaControleAtitudeTID2 ( & ( dw -> rtb ) ) ; } if ( tid !=
 CONSTANT_TID && tid != PARAMETER_TUNING_TID ) { if ( ssIsSampleHit ( S , 0 ,
 tid ) || ssIsMinorTimeStep ( S ) ) { DinamicaCinematicaControleAtitude ( & (
-dw -> rtm ) , i_ff5vy3ikvm , i_hrxbdyk1yr , i_fs10l2wtk4 , o_B_15_1 ,
-o_B_15_2 , o_B_15_3 , & ( dw -> rtb ) , & ( dw -> rtdw ) , localX ) ; } } }
+dw -> rtm ) , i_ff5vy3ikvm , i_hrxbdyk1yr , i_fs10l2wtk4 , o_B_7_1 , o_B_7_2
+, o_B_7_3 , & ( dw -> rtb ) , & ( dw -> rtdw ) , localX ) ; } } }
 #define MDL_UPDATE
 static void mdlUpdate ( SimStruct * S , int_T tid ) { iqjk2gahmfr * dw = (
 iqjk2gahmfr * ) ssGetDWork ( S , 0 ) ; k11bgqmkqe ( & ( dw -> rtm ) , & ( dw
